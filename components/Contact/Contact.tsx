@@ -44,7 +44,7 @@ export default function Contact() {
     }
   };
   return (
-    <div id="contact" className="px-16 py-20 lg:flex lg:px-24">
+    <div id="contact" className="py-20 lg:flex">
       <div className="text text-4xl font-semibold sm:text-5xl lg:w-1/2">
         <p>Love to here from you, </p>
         <div className="mt-6 flex items-center">

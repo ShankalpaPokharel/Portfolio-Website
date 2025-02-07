@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="m-4 rounded-lg px-16 lg:px-24 shadow">
+    <footer className="m-4 rounded-lg shadow">
       <div className="mx-auto w-full md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link
@@ -13,7 +13,7 @@ export default function Footer() {
               Shankalpa
             </span>
           </Link>
-          <ul className="mb-6 flex flex-col md:flex-row md:items-center gap-6 text-sm font-medium text-gray-400 sm:mb-0">
+          <ul className="mb-6 flex flex-col gap-6 text-sm font-medium text-gray-400 sm:mb-0 md:flex-row md:items-center">
             <li>
               <a href="#" className="me-4 hover:underline md:me-6">
                 Home

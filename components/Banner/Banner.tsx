@@ -17,10 +17,7 @@ export default function Banner() {
   `;
 
   return (
-    <div
-      id="banner"
-      className="flex h-screen items-center justify-between px-16 lg:px-24"
-    >
+    <div id="banner" className="flex h-screen items-center justify-between">
       <div className="mt-20 flex w-full flex-col justify-between gap-10 md:flex-row md:items-center">
         <div className="md:gap-auto mt-20 flex flex-col gap-4 2xl:text-xl">
           <p>Hello I am,</p>

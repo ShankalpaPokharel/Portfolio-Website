@@ -7,10 +7,7 @@ import { SiJavascript } from "react-icons/si";
 
 export default function About() {
   return (
-    <div
-      id="about"
-      className="mt-20 flex flex-col gap-10 px-16 pb-24 lg:flex-row lg:px-24"
-    >
+    <div id="about" className="mt-20 flex flex-col gap-10 pb-24 lg:flex-row">
       <div className="w-full lg:w-1/2">
         <Image
           src={"/images/about.png"}
@@ -34,9 +31,9 @@ export default function About() {
         </p>
         <p className="text-justify">
           For me, coding is more than just a job—it&mdash;s about exploring new
-          technologies and staying updated with the latest trends. I&mdash;m always
-          eager to learn and excited about working on projects that make a
-          meaningful impact.
+          technologies and staying updated with the latest trends. I&mdash;m
+          always eager to learn and excited about working on projects that make
+          a meaningful impact.
         </p>
         <p className="text-xl font-bold underline">Things I love</p>
         <div className="grid grid-cols-2 gap-5">

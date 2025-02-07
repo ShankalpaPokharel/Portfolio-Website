@@ -19,7 +19,7 @@ function SkillDev({
   iconColor: string;
 }) {
   return (
-    <div className="w-fill rounded-2xl bg-[#232323] px-12 py-10 hover-effect-box">
+    <div className="w-fill hover-effect-box rounded-2xl bg-[#232323] px-12 py-10">
       <div className="flex flex-col items-center justify-between space-y-6">
         <div className="flex w-fit items-center justify-center rounded-full bg-white p-3">
           {IconComponent && (
@@ -47,7 +47,7 @@ export default function MySkills() {
   ];
 
   return (
-    <div id="skills" className="gap-10 px-16 py-20 lg:flex lg:px-24">
+    <div id="skills" className="gap-10 py-20 lg:flex">
       <div className="lg:w-[40%]">
         <div className="w-fit rounded-3xl border border-slate-500 px-5 py-2">
           What I Know?

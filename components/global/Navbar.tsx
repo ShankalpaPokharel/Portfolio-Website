@@ -26,8 +26,8 @@ export default function Navbar() {
 
   console.log(navOpen);
   return (
-    <nav className="fixed w-full bg-black bg-opacity-90 text-left lg:h-auto lg:w-full mt-10">
-      <div className="flex flex-col justify-between px-16 py-2 lg:flex-row lg:items-center lg:px-24 overflow-hidden">
+    <nav className="fixed mt-10 w-full bg-black bg-opacity-90 text-left lg:h-auto lg:w-full">
+      <div className="flex flex-col justify-between overflow-hidden px-6 py-2 lg:flex-row lg:items-center lg:px-24">
         <div>
           <Link href="#banner" className="text-2xl font-bold lg:text-4xl">
             Shankalpa
