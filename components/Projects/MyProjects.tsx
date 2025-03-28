@@ -22,7 +22,7 @@ export default function MyProjects() {
         { icon: SiMongodb, iconColor: "#47A248" },
         { icon: SiReact, iconColor: "#61DAFB" },
       ],
-      githubLink: "https://github.com/ShankalpaPokharel/Scholar",
+      githubLink: "https://scholar-aba6.vercel.app/",
     },
     {
       imageSrc: "/images/project2.png",
