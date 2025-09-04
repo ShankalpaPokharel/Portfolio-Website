@@ -23,8 +23,13 @@ export default function RootLayout({
         <ToastProvider>
             <NavHeader />
             <Navbar />
-            <Container>{children} <Footer /></Container>
-            
+            <Container>
+                <div className="min-h-[80vh]">
+                    {children}
+                </div>
+                <Footer />
+            </Container>
+
         </ToastProvider>
     );
 }

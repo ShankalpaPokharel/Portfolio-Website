@@ -125,11 +125,14 @@ export async function GET(request: NextRequest) {
     let query = {};
     if (published === 'true') {
       query = { published: true };
-      //to show only published posts if user is reqesting unpublished, check if user is authenticated
-      if (!isAuthenticated()) {
+    }
+    else{
+    //to show only published posts if user is reqesting unpublished, check if user is authenticated
+    if (!isAuthenticated()) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
     }
+
     
     const posts = await Post.find(query)
       .sort({ createdAt: -1 })

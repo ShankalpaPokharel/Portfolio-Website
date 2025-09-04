@@ -71,7 +71,7 @@ export default function Navbar() {
 }
           
           <li className="group relative">
-            <Link href="/test">Blog</Link>
+            <Link href="/blog">Blog</Link>
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-indigo-600 transition-all group-hover:w-full"></span>
           </li>
           <ModeToggle/>

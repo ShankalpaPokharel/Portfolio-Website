@@ -4,6 +4,7 @@ import Contact from "@/components/Contact/Contact";
 import Container from "@/components/global/Container";
 import Footer from "@/components/global/Footer";
 import Navbar from "@/components/global/Navbar";
+import MyBlogs from "@/components/MyBlogs/MyBlogs";
 import MySkills from "@/components/MySkills/MySkills";
 import NavHeader from "@/components/NavHeader";
 import MyProjects from "@/components/Projects/MyProjects";
@@ -57,6 +58,7 @@ export default function Home() {
         <About />
         <MySkills />
         <MyProjects />
+        <MyBlogs/>
         <Contact />
 
     </main>
