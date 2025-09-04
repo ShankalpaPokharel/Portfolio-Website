@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="m-4 rounded-lg shadow">
       <div className="mx-auto w-full md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex sm:items-center sm:justify-between px-10">
           <Link
             href="/"
             className="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"

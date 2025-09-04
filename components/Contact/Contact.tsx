@@ -104,7 +104,7 @@ export default function Contact() {
           <div className="w-full md:w-1/2">
             <label
               htmlFor="fullName"
-              className="mb-2 block text-sm font-medium text-white"
+              className="mb-2 block text-sm font-medium "
             >
               Your Name
             </label>
@@ -120,7 +120,7 @@ export default function Contact() {
           <div className="w-full md:w-1/2">
             <label
               htmlFor="email"
-              className="mb-2 block text-sm font-medium text-white"
+              className="mb-2 block text-sm font-medium "
             >
               Your Email
             </label>
@@ -137,7 +137,7 @@ export default function Contact() {
         <div className="mt-4 lg:w-1/2">
           <label
             htmlFor="interest"
-            className="mb-2 block text-sm font-medium text-white"
+            className="mb-2 block text-sm font-medium "
           >
             What you are interested
           </label>
@@ -146,11 +146,11 @@ export default function Contact() {
             id="interest"
             className="foucs:outline-none block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
           >
-            <option value="full-stack-web-development">
+            {/* <option value="full-stack-web-development">
               Full-Stack Web Development
-            </option>
+            </option> */}
             <option value="frontend-development">Frontend Development</option>
-            <option value="backend-development">Backend Development</option>
+            {/* <option value="backend-development">Backend Development</option> */}
             <option value="portfolio-website">Portfolio Website</option>
             <option value="responsive-web-design">Responsive Web Design</option>
             <option value="api-integration">API Integration</option>
@@ -164,7 +164,7 @@ export default function Contact() {
         <div className="mt-4 w-full">
           <label
             htmlFor="message"
-            className="mb-2 block text-sm font-medium text-white"
+            className="mb-2 block text-sm font-medium"
           >
             Your message
           </label>

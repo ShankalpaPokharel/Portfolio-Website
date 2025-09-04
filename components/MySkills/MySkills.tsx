@@ -19,7 +19,7 @@ function SkillDev({
   iconColor: string;
 }) {
   return (
-    <div className="w-fill hover-effect-box rounded-2xl bg-[#232323] px-12 py-10">
+    <div className="w-fill hover-effect-box rounded-2xl bg-[#232323] px-12 py-10 text-white ">
       <div className="flex flex-col items-center justify-between space-y-6">
         <div className="flex w-fit items-center justify-center rounded-full bg-white p-3">
           {IconComponent && (

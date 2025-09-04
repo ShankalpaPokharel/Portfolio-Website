@@ -52,16 +52,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <NavHeader />
-      <Navbar />
-      <Container>
+
         <Banner />
         <About />
         <MySkills />
         <MyProjects />
         <Contact />
-        <Footer />
-      </Container>
+
     </main>
   );
 }
