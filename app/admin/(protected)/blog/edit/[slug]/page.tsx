@@ -102,7 +102,10 @@ export default function EditBlogPost({ params }: { params: { slug: string } }) {
 
   const fetchPost = async () => {
     try {
-      const response = await fetch(`/api/posts/${params.slug}`);
+      const response = await fetch(`/api/posts/${params.slug}`, {
+      // Remove revalidate if you want SSR, or keep for ISR
+      next: { revalidate: 60 }, // Optional: Revalidate every 60 seconds
+    });
       const post = await response.json();
 
       setFormData({

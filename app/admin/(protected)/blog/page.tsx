@@ -43,7 +43,10 @@ export default function AdminBlogPage() {
 
   const fetchPosts = async () => {
     try {
-      const response = await fetch('/api/posts');
+      const response = await fetch('/api/posts', {
+      // Remove revalidate if you want SSR, or keep for ISR
+      next: { revalidate: 60 }, // Optional: Revalidate every 60 seconds
+    });
       const data = await response.json();
       setPosts(data.posts);
     } catch (error) {
