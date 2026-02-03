@@ -10,7 +10,7 @@ export default async function MyBlogs() {
     }
     return (
         <div>
-            <div className="w-fit rounded-3xl border border-slate-500 px-5 py-2">
+            <div className="w-fit rounded-3xl border border-slate-500 px-5 py-2 my-6">
                 <p>My Blogs</p>
             </div>
             <BlogLists showTitle={false} numberOfPosts={4} posts={posts} />
