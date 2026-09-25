@@ -9,8 +9,17 @@ import BlogLists from './BlogLists';
 
 
 export const metadata: Metadata = {
-  title: 'Blog - My Portfolio',
-  description: 'Read the latest articles and tutorials from my blog.',
+  title: 'Blog | Shankalpa Pokharel - Web Development Articles & Tutorials',
+  description: 'Read the latest web development articles, tutorials, and insights by Shankalpa Pokharel. Topics include Next.js, React, JavaScript, MERN stack, and more.',
+  alternates: {
+    canonical: 'https://www.shankalpapokharel.com.np/blog',
+  },
+  openGraph: {
+    title: 'Blog | Shankalpa Pokharel',
+    description: 'Web development articles and tutorials by Shankalpa Pokharel.',
+    type: 'website',
+    url: 'https://www.shankalpapokharel.com.np/blog',
+  },
 };
 
 

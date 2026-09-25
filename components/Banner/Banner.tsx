@@ -21,11 +21,11 @@ export default function Banner() {
       <div className="mt-20 flex w-full flex-col justify-between gap-10 md:flex-row md:items-center">
         <div className="md:gap-auto mt-20 flex flex-col gap-4 2xl:text-xl">
           <p>Hello I am,</p>
-          <p className="text-4xl font-bold lg:text-5xl">Shankalpa Pokharel</p>
-          <p>
+          <h1 className="text-4xl font-bold lg:text-5xl">Shankalpa Pokharel</h1>
+          <h2 className="text-base font-normal 2xl:text-xl">
             Frontend Developer - Building seamless web experiences with Next.js
             and the MERN stack
-          </p>
+          </h2>
           <div className="flex space-x-5">
             <div className="hover-effect-box rounded-full bg-white p-3">
               <Link

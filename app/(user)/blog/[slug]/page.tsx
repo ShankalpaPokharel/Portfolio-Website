@@ -68,16 +68,21 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: post.title,
-    description: post.description,
+    title: `${post.metaTitle || post.title} | Shankalpa Pokharel`,
+    description: post.metaDescription || post.description,
     keywords: post.keywords?.join(', '),
+    authors: [{ name: post.author || 'Shankalpa Pokharel' }],
+    alternates: {
+      canonical: `https://www.shankalpapokharel.com.np/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       images: post.coverImage ? [post.coverImage] : [],
       type: 'article',
       publishedTime: post.publishedAt,
-      authors: [post.author],
+      authors: [post.author || 'Shankalpa Pokharel'],
+      url: `https://www.shankalpapokharel.com.np/blog/${post.slug}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -105,9 +110,70 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
 
 
+  // Article JSON-LD structured data
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    image: post.coverImage || "https://www.shankalpapokharel.com.np/images/about.png",
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt || post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: post.author || "Shankalpa Pokharel",
+      url: "https://www.shankalpapokharel.com.np",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Shankalpa Pokharel",
+      url: "https://www.shankalpapokharel.com.np",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.shankalpapokharel.com.np/blog/${post.slug}`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.shankalpapokharel.com.np",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.shankalpapokharel.com.np/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `https://www.shankalpapokharel.com.np/blog/${post.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
       <Toaster position="top-right" />
       <article className="container mx-auto px-4 py-10 max-w-4xl">
         {/* Breadcrumb */}

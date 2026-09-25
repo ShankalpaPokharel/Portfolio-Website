@@ -15,7 +15,7 @@ export default function About() {
           height={400}
           quality={100}
           className="object-fit w-full rounded-xl"
-          alt="about image"
+          alt="Shankalpa Pokharel - Web Developer from Nepal"
         />
       </div>
       <div className="order-1 space-y-5 lg:order-2 lg:w-1/2">

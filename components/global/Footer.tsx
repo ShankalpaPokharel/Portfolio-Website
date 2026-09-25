@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="m-4 rounded-lg shadow">
       <div className="mx-auto w-full md:py-8">
@@ -15,36 +17,39 @@ export default function Footer() {
           </Link>
           <ul className="mb-6 flex flex-col gap-6 text-sm font-medium text-gray-400 sm:mb-0 md:flex-row md:items-center">
             <li>
-              <a href="#" className="me-4 hover:underline md:me-6">
+              <Link href="/" className="me-4 hover:underline md:me-6">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="me-4 hover:underline md:me-6">
+              <Link href="/#about" className="me-4 hover:underline md:me-6">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="me-4 hover:underline md:me-6">
+              <Link href="/#skills" className="me-4 hover:underline md:me-6">
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <Link href="/#projects" className="hover:underline">
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <Link href="/#contact" className="hover:underline">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
         <span className="block text-sm text-gray-400 sm:text-center">
-          © 2024 <span className="hover:underline">Shankalpa™</span>. All
-          Rights Reserved.
+          © {currentYear}{" "}
+          <Link href="/" className="hover:underline">
+            Shankalpa Pokharel
+          </Link>
+          . All Rights Reserved.
         </span>
       </div>
     </footer>
